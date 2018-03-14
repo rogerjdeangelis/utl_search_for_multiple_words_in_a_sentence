@@ -34,6 +34,10 @@ Find the words 'band' or 'ochestra' in the title or description of an musical ev
       set have;
       music = prxmatch('/BAND|ORCHESTRA/',upcase(catx(' ',title,description)))>0;
     run;quit;
+    
+    * for a word search
+    music = prxmatch('/\bBAND\b|\bORCHESTRA\b/',upcase(catx(' ',title,description)))>0;
+    Also you can compile the pattern for faster searches
 
 
     OUTPUT
